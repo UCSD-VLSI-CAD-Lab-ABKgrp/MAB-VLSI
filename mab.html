@@ -1,162 +1,33 @@
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>mab package &mdash; MAB-VLSI 1.0.0 documentation</title>
-  
-
-  
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="MAB-VLSI 1.0.0 documentation" href="index.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>mab package &#8212; MAB-VLSI 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
    
-  <div class="wy-grid-for-nav">
-
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
-
-          
-            <a href="index.html" class="icon icon-home"> MAB-VLSI
-          
-
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">mab package</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-mab.algorithms">mab.algorithms module</a></li>
-<li><a class="reference internal" href="#module-mab.rewards">mab.rewards module</a></li>
-<li><a class="reference internal" href="#module-mab.sampling">mab.sampling module</a></li>
-<li><a class="reference internal" href="#module-mab.utils">mab.utils module</a></li>
-<li><a class="reference internal" href="#module-mab">Module contents</a></li>
-</ul>
-</li>
-</ul>
-</div>
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">MAB-VLSI</a>
-        
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>mab package</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="_sources/mab.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="mab-package">
 <h1>mab package<a class="headerlink" href="#mab-package" title="Permalink to this headline">¶</a></h1>
@@ -209,7 +80,7 @@ the sample with the highest reward value</dd>
 <dl class="class">
 <dt id="mab.algorithms.ThompsonSampling">
 <em class="property">class </em><code class="descclassname">mab.algorithms.</code><code class="descname">ThompsonSampling</code><span class="sig-paren">(</span><em>sampler_set</em>, <em>reward_models</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mab/algorithms.html#ThompsonSampling"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mab.algorithms.ThompsonSampling" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#mab.algorithms.Algorithm" title="mab.algorithms.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.algorithms.Algorithm</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pages/code-docs.html#mab.algorithms.Algorithm" title="mab.algorithms.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.algorithms.Algorithm</span></code></a></p>
 <dl class="method">
 <dt id="mab.algorithms.ThompsonSampling.solve">
 <code class="descname">solve</code><span class="sig-paren">(</span><em>num_rounds</em>, <em>samples_per_round</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mab/algorithms.html#ThompsonSampling.solve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mab.algorithms.ThompsonSampling.solve" title="Permalink to this definition">¶</a></dt>
@@ -230,7 +101,7 @@ the sample with the highest reward value</dd>
 <dl class="class">
 <dt id="mab.rewards.BinomialRewardModel">
 <em class="property">class </em><code class="descclassname">mab.rewards.</code><code class="descname">BinomialRewardModel</code><span class="sig-paren">(</span><em>size</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mab/rewards.html#BinomialRewardModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mab.rewards.BinomialRewardModel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#mab.rewards.RewardModel" title="mab.rewards.RewardModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.rewards.RewardModel</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pages/code-docs.html#mab.rewards.RewardModel" title="mab.rewards.RewardModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.rewards.RewardModel</span></code></a></p>
 <p>Implementation of the <code class="xref py py-class docutils literal notranslate"><span class="pre">rewards.RewardModel</span></code> interface for Binomial data. Uses 
 Beta distributions to form a model of the success probability at each arm.</p>
 <dl class="method">
@@ -265,7 +136,7 @@ of the reward model.</p>
 <dl class="class">
 <dt id="mab.rewards.ConstrainedRewardModel">
 <em class="property">class </em><code class="descclassname">mab.rewards.</code><code class="descname">ConstrainedRewardModel</code><span class="sig-paren">(</span><em>size</em>, <em>reward_values</em>, <em>max_iter=5</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mab/rewards.html#ConstrainedRewardModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mab.rewards.ConstrainedRewardModel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#mab.rewards.BinomialRewardModel" title="mab.rewards.BinomialRewardModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.rewards.BinomialRewardModel</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pages/code-docs.html#mab.rewards.BinomialRewardModel" title="mab.rewards.BinomialRewardModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.rewards.BinomialRewardModel</span></code></a></p>
 <p>An extension of the BinomialRewardModel to take into account decreasing probability
 contraints.</p>
 <p>These contraints arise naturally in some settings such as increasing clock periods 
@@ -294,7 +165,7 @@ Sampling algorithm to choose an arm to play at each step.</p>
 <dl class="class">
 <dt id="mab.rewards.GaussianProcessModel">
 <em class="property">class </em><code class="descclassname">mab.rewards.</code><code class="descname">GaussianProcessModel</code><span class="sig-paren">(</span><em>K0</em>, <em>a</em>, <em>b</em>, <em>m0</em>, <em>prec0</em>, <em>sample_burn=100</em>, <em>sample_thin=3</em>, <em>sample_tune=1500</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mab/rewards.html#GaussianProcessModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mab.rewards.GaussianProcessModel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#mab.rewards.RewardModel" title="mab.rewards.RewardModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.rewards.RewardModel</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pages/code-docs.html#mab.rewards.RewardModel" title="mab.rewards.RewardModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.rewards.RewardModel</span></code></a></p>
 <p>Implementation of the <code class="xref py py-class docutils literal notranslate"><span class="pre">rewards.RewardModel</span></code> interface using a Gaussian Process reward model.</p>
 <p>The assumption here is that nearby arms will behave more similarly that arms that are farther
 apart, in terms of metrics. The Gaussian Process model helps enforce this smoothness.</p>
@@ -389,7 +260,7 @@ of the reward model.</p>
 <dl class="class">
 <dt id="mab.sampling.GaussianSampler">
 <em class="property">class </em><code class="descclassname">mab.sampling.</code><code class="descname">GaussianSampler</code><span class="sig-paren">(</span><em>attribute_names</em>, <em>metric_function</em>, <em>valid_function</em>, <em>constants</em>, <em>attribute_means</em>, <em>attribute_stds</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mab/sampling.html#GaussianSampler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mab.sampling.GaussianSampler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#mab.sampling.Sampler" title="mab.sampling.Sampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.sampling.Sampler</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pages/code-docs.html#mab.sampling.Sampler" title="mab.sampling.Sampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.sampling.Sampler</span></code></a></p>
 <p>Implementation of the Sampler interface using a normal distribution to generate the samples.</p>
 <p>…</p>
 <dl class="docutils">
@@ -408,7 +279,7 @@ of the reward model.</p>
 <dl class="class">
 <dt id="mab.sampling.KdeSampler">
 <em class="property">class </em><code class="descclassname">mab.sampling.</code><code class="descname">KdeSampler</code><span class="sig-paren">(</span><em>attribute_names</em>, <em>metric_function</em>, <em>valid_function</em>, <em>constants</em>, <em>attribute_data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mab/sampling.html#KdeSampler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mab.sampling.KdeSampler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#mab.sampling.Sampler" title="mab.sampling.Sampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.sampling.Sampler</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pages/code-docs.html#mab.sampling.Sampler" title="mab.sampling.Sampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.sampling.Sampler</span></code></a></p>
 <p>Implementation of the <code class="xref py py-class docutils literal notranslate"><span class="pre">sampling.Sampler</span></code> interface using a KDE algorithm to generate samples given historical data.</p>
 <p>…</p>
 <dl class="docutils">
@@ -484,7 +355,7 @@ calculates the boolean validity of the sample.</dd>
 <dl class="class">
 <dt id="mab.sampling.ToolSampler">
 <em class="property">class </em><code class="descclassname">mab.sampling.</code><code class="descname">ToolSampler</code><span class="sig-paren">(</span><em>attribute_names</em>, <em>metric_function</em>, <em>valid_function</em>, <em>noise_model</em>, <em>constants</em>, <em>param_buffer</em>, <em>sample_buffer</em>, <em>script_path</em>, <em>params</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mab/sampling.html#ToolSampler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mab.sampling.ToolSampler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#mab.sampling.Sampler" title="mab.sampling.Sampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.sampling.Sampler</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pages/code-docs.html#mab.sampling.Sampler" title="mab.sampling.Sampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.sampling.Sampler</span></code></a></p>
 <p>Implementation of the <code class="xref py py-class docutils literal notranslate"><span class="pre">sampling.Sampler</span></code> interaface using real tool runs to generate the data.</p>
 <p>…</p>
 <dl class="docutils">
@@ -525,7 +396,7 @@ calculates the boolean validity of the sample.</dd>
 <dl class="class">
 <dt id="mab.utils.GaussianNoiseModel">
 <em class="property">class </em><code class="descclassname">mab.utils.</code><code class="descname">GaussianNoiseModel</code><span class="sig-paren">(</span><em>variance</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mab/utils.html#GaussianNoiseModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mab.utils.GaussianNoiseModel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#mab.utils.NoiseModel" title="mab.utils.NoiseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.utils.NoiseModel</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pages/code-docs.html#mab.utils.NoiseModel" title="mab.utils.NoiseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.utils.NoiseModel</span></code></a></p>
 <dl class="method">
 <dt id="mab.utils.GaussianNoiseModel.add_noise">
 <code class="descname">add_noise</code><span class="sig-paren">(</span><em>x</em>, <em>count</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mab/utils.html#GaussianNoiseModel.add_noise"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mab.utils.GaussianNoiseModel.add_noise" title="Permalink to this definition">¶</a></dt>
@@ -566,66 +437,67 @@ calculates the boolean validity of the sample.</dd>
 </div>
 
 
-           </div>
-           <div class="articleComments">
-            
-           </div>
           </div>
-          <footer>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2018, Shriram Kumar, Tushar Shah.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">mab package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-mab.algorithms">mab.algorithms module</a></li>
+<li><a class="reference internal" href="#module-mab.rewards">mab.rewards module</a></li>
+<li><a class="reference internal" href="#module-mab.sampling">mab.sampling module</a></li>
+<li><a class="reference internal" href="#module-mab.utils">mab.utils module</a></li>
+<li><a class="reference internal" href="#module-mab">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/mab.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Shriram Kumar, Tushar Shah.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/mab.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.0.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>
