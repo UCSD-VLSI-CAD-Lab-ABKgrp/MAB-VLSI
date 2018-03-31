@@ -9,7 +9,12 @@ Welcome to MAB-VLSI's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :numbered:
 
+   pages/introduction.rst
+   pages/samples.rst
+   pages/code-docs.rst
+   
 
 
 Indices and tables
