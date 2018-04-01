@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. Sample Usage &mdash; MAB-VLSI 1.0.0 documentation</title>
+  <title>2. Sample Code &mdash; MAB-VLSI 1.0.0 documentation</title>
   
 
   
@@ -89,7 +89,7 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Sample Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Sample Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="code-docs.html">3. Code Documentation</a></li>
 </ul>
 
@@ -135,7 +135,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>2. Sample Usage</li>
+      <li>2. Sample Code</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -154,17 +154,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="sample-usage">
-<h1>2. Sample Usage<a class="headerlink" href="#sample-usage" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="file docutils literal notranslate"><span class="pre">run.py</span></code> is a sample usage of the MAB-VLSI code to solve a toy Multi Armed Bandit problem. We will go over the various code sections and highlight how this can be used on a real MAB problem.</p>
-<p>First the reward model is instantiated.
-.. code-block:: python</p>
-<blockquote>
-<div>reward_model = BinomialRewardModel(SIZE)</div></blockquote>
-<p>Various reward models are available for use in the  <a class="reference internal" href="code-docs.html#module-mab.rewards" title="mab.rewards"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mab.rewards</span></code></a>. Any of these reward modules can be used here. Details about the parameters of individual reward models can be found in the code documentation section. Typically, for Problem 1 as mentioned in our paper, <a class="reference internal" href="code-docs.html#mab.rewards.BinomialRewardModel" title="mab.rewards.BinomialRewardModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.rewards.BinomialRewardModel</span></code></a> will be used and for Problem 2, <a class="reference internal" href="code-docs.html#mab.rewards.GaussianProcessModel" title="mab.rewards.GaussianProcessModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.rewards.GaussianProcessModel</span></code></a> will be used.</p>
-<p>Next, the sampler and sampler sets are created. This is the interface that allows the MAB code to draw samples.</p>
-<p>In this example, samples are simulated from a gaussian distribution. Most real runs will use the <a class="reference internal" href="code-docs.html#mab.sampling.ToolSampler" title="mab.sampling.ToolSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.sampling.ToolSampler</span></code></a>.</p>
+  <div class="section" id="sample-code">
+<h1>2. Sample Code<a class="headerlink" href="#sample-code" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="file docutils literal notranslate"><span class="pre">run.py</span></code> script is an example that uses the MAB-VLSI code to solve a toy Multi Armed Bandit problem. We will go over the various code sections and explain how to adapt them to both variants of VLSI MAB problems we study.</p>
+<p>First the reward model is instantiated.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">reward_model</span> <span class="o">=</span> <span class="n">BinomialRewardModel</span><span class="p">(</span><span class="n">SIZE</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Various reward models are available for use in the  <a class="reference internal" href="code-docs.html#module-mab.rewards" title="mab.rewards"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mab.rewards</span></code></a> module. Details about the parameters of individual reward models can be found in the code documentation section. Typically, for Problem 1 as mentioned in our paper, <a class="reference internal" href="code-docs.html#mab.rewards.BinomialRewardModel" title="mab.rewards.BinomialRewardModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.rewards.BinomialRewardModel</span></code></a> will be used and for Problem 2, <a class="reference internal" href="code-docs.html#mab.rewards.GaussianProcessModel" title="mab.rewards.GaussianProcessModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.rewards.GaussianProcessModel</span></code></a> will be used.</p>
+<p>Next, the sampler and sampler sets are created. This is the interface that allows the MAB code to draw samples either from tool runs or from simulations.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">samplers</span> <span class="o">=</span> <span class="p">[</span><span class="n">GaussianSampler</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">],</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">],</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">])]</span><span class="o">*</span><span class="n">SIZE</span>
+<span class="n">sampler_set</span> <span class="o">=</span> <span class="n">SamplerSet</span><span class="p">(</span><span class="n">samplers</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this example, samples are simulated from a gaussian distribution. Most real runs will use the <a class="reference internal" href="code-docs.html#mab.sampling.ToolSampler" title="mab.sampling.ToolSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.sampling.ToolSampler</span></code></a> which draws samples from tool runs. To understand how to configure a tool sampler, please read the code documentation for <a class="reference internal" href="code-docs.html#mab.sampling.ToolSampler" title="mab.sampling.ToolSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">mab.sampling.ToolSampler</span></code></a>.</p>
 <p>Finally, the solver is instantiated and solve is called to run the MAB algorithm for a desired schedule and obtain the optimal sample.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ts_solver</span> <span class="o">=</span> <span class="n">ThompsonSampling</span><span class="p">(</span><span class="n">sampler_set</span><span class="p">,</span> <span class="n">reward_model</span><span class="p">)</span>
+<span class="n">optimal_sample</span> <span class="o">=</span> <span class="n">ts_solver</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 
 
