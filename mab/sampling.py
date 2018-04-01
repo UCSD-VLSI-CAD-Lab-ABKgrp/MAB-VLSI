@@ -175,7 +175,7 @@ class ToolSampler(Sampler):
     sample_buffer: string
         The file that the tool writes output data to.
     script_path: string
-        The path to the run script that comes packages with the tool. For more details see [3]_.
+        The path to the run script that comes packaged with the tool license. For more details see [3]_.
     params: list
         The mean parameters to supply to the ::py::class::`utils.NoiseModel`. Denoising is performed around these values
 
