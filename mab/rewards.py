@@ -144,7 +144,7 @@ class GaussianProcessModel(RewardModel):
         A 2d kernel matrix. This controls the amount of smoothness that the model assumes apriori.
     m0: 1d array
         The prior reward means that the model assumes.
-    For more details about other parameters, see <http://www.gaussianprocess.org/#tut/>.
+    For more details about other parameters, see `this gaussian process tutorial <http://www.gaussianprocess.org/#tut/>`_.
     
     """    
     mean_name = "mu"
