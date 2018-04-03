@@ -1,46 +1,34 @@
 Code Documentation
 ==================
 
-Submodules
+Algorithms
 ----------
-
-mab.algorithms module
----------------------
 
 .. automodule:: mab.algorithms
     :members:
     :undoc-members:
     :show-inheritance:
 
-mab.rewards module
-------------------
+Rewards
+-------
 
 .. automodule:: mab.rewards
     :members:
     :undoc-members:
     :show-inheritance:
 
-mab.sampling module
--------------------
+Sampling
+--------
 
 .. automodule:: mab.sampling
     :members:
     :undoc-members:
     :show-inheritance:
 
-mab.utils module
-----------------
+Utils
+-----
 
 .. automodule:: mab.utils
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-
-Module contents
----------------
-
-.. automodule:: mab
     :members:
     :undoc-members:
     :show-inheritance:

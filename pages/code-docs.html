@@ -90,12 +90,10 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="samples.html">2. Sample Code</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">3. Code Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#submodules">3.1. Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-mab.algorithms">3.2. mab.algorithms module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-mab.rewards">3.3. mab.rewards module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-mab.sampling">3.4. mab.sampling module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-mab.utils">3.5. mab.utils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-mab">3.6. Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-mab.algorithms">3.1. Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-mab.rewards">3.2. Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-mab.sampling">3.3. Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-mab.utils">3.4. Utils</a></li>
 </ul>
 </li>
 </ul>
@@ -163,11 +161,8 @@
             
   <div class="section" id="code-documentation">
 <h1>3. Code Documentation<a class="headerlink" href="#code-documentation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
-<h2>3.1. Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
 <div class="section" id="module-mab.algorithms">
-<span id="mab-algorithms-module"></span><h2>3.2. mab.algorithms module<a class="headerlink" href="#module-mab.algorithms" title="Permalink to this headline">¶</a></h2>
+<span id="algorithms"></span><h2>3.1. Algorithms<a class="headerlink" href="#module-mab.algorithms" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="mab.algorithms.Algorithm">
 <em class="property">class </em><code class="descclassname">mab.algorithms.</code><code class="descname">Algorithm</code><span class="sig-paren">(</span><em>sampler_set</em>, <em>reward_models</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mab/algorithms.html#Algorithm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mab.algorithms.Algorithm" title="Permalink to this definition">¶</a></dt>
@@ -229,7 +224,7 @@ the sample with the highest reward value</dd>
 
 </div>
 <div class="section" id="module-mab.rewards">
-<span id="mab-rewards-module"></span><h2>3.3. mab.rewards module<a class="headerlink" href="#module-mab.rewards" title="Permalink to this headline">¶</a></h2>
+<span id="rewards"></span><h2>3.2. Rewards<a class="headerlink" href="#module-mab.rewards" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="mab.rewards.BinomialRewardModel">
 <em class="property">class </em><code class="descclassname">mab.rewards.</code><code class="descname">BinomialRewardModel</code><span class="sig-paren">(</span><em>size</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mab/rewards.html#BinomialRewardModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mab.rewards.BinomialRewardModel" title="Permalink to this definition">¶</a></dt>
@@ -308,7 +303,7 @@ apart, in terms of metrics. The Gaussian Process model helps enforce this smooth
 <dt>m0: 1d array</dt>
 <dd>The prior reward means that the model assumes.</dd>
 </dl>
-<p>For more details about other parameters, see &lt;<a class="reference external" href="http://www.gaussianprocess.org/#tut/">http://www.gaussianprocess.org/#tut/</a>&gt;.</p>
+<p>For more details about other parameters, see <a class="reference external" href="http://www.gaussianprocess.org/#tut/">this gaussian process tutorial</a>.</p>
 <dl class="attribute">
 <dt id="mab.rewards.GaussianProcessModel.mean_name">
 <code class="descname">mean_name</code><em class="property"> = 'mu'</em><a class="headerlink" href="#mab.rewards.GaussianProcessModel.mean_name" title="Permalink to this definition">¶</a></dt>
@@ -388,7 +383,7 @@ of the reward model.</p>
 
 </div>
 <div class="section" id="module-mab.sampling">
-<span id="mab-sampling-module"></span><h2>3.4. mab.sampling module<a class="headerlink" href="#module-mab.sampling" title="Permalink to this headline">¶</a></h2>
+<span id="sampling"></span><h2>3.3. Sampling<a class="headerlink" href="#module-mab.sampling" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="mab.sampling.GaussianSampler">
 <em class="property">class </em><code class="descclassname">mab.sampling.</code><code class="descname">GaussianSampler</code><span class="sig-paren">(</span><em>attribute_names</em>, <em>metric_function</em>, <em>valid_function</em>, <em>constants</em>, <em>attribute_means</em>, <em>attribute_stds</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mab/sampling.html#GaussianSampler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mab.sampling.GaussianSampler" title="Permalink to this definition">¶</a></dt>
@@ -524,7 +519,7 @@ calculates the boolean validity of the sample.</dd>
 
 </div>
 <div class="section" id="module-mab.utils">
-<span id="mab-utils-module"></span><h2>3.5. mab.utils module<a class="headerlink" href="#module-mab.utils" title="Permalink to this headline">¶</a></h2>
+<span id="utils"></span><h2>3.4. Utils<a class="headerlink" href="#module-mab.utils" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="mab.utils.GaussianNoiseModel">
 <em class="property">class </em><code class="descclassname">mab.utils.</code><code class="descname">GaussianNoiseModel</code><span class="sig-paren">(</span><em>variance</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mab/utils.html#GaussianNoiseModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mab.utils.GaussianNoiseModel" title="Permalink to this definition">¶</a></dt>
@@ -562,9 +557,6 @@ calculates the boolean validity of the sample.</dd>
 
 </dd></dl>
 
-</div>
-<div class="section" id="module-mab">
-<span id="module-contents"></span><h2>3.6. Module contents<a class="headerlink" href="#module-mab" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
